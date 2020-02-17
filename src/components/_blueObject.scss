@@ -1,0 +1,36 @@
+.blueObject{
+	background-color: $SoftBlue;
+	height:30%;
+	width:50%;
+	position: absolute;
+	right:0;
+	top:calc(15% + 0px);
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	z-index: -1;
+	@media screen and (min-width:1000px){
+		height: 50%;
+		width:30%;
+		top:30%;
+	}
+}
+
+
+.slide .blueObject{
+	display: block;
+	height:calc(201px + 30%);
+	width:calc(270px + 20%);
+	@media screen and (min-width:880px){
+	height:350px;
+	width:400px;
+	top:90px;
+	}
+	position: absolute;
+	left:-34px;
+	z-index: -1;
+	top:60px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}

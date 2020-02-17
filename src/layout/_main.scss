@@ -1,0 +1,220 @@
+main{
+	padding:43px 34px 154px 34px;
+	text-align: center;
+	max-width: 1440px;
+	margin:0 auto;
+	overflow:hidden;
+	section:nth-of-type(1){
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		position: relative;
+		ul{
+			padding-left: 0;
+			@media screen and (min-width:800px){
+				display: flex;
+				flex-direction: row;
+				margin:0 auto;
+				max-width: 725px;
+				align-self: center;
+			}
+			li{
+				padding:21px;
+				border-top:0.1px solid $GrayishBlue;
+				border-radius: 1px;
+				border-left: none;
+				border-right: none;
+				position: relative;
+				@media screen and (min-width:800px){
+					border-top: none;
+					border-bottom:0.1px solid $GrayishBlue;
+					padding:30px;
+				}
+			}
+			li:nth-of-type(3){
+				border-bottom:0.1px solid $GrayishBlue;
+			}
+			.onFocus{
+				height: 3px;
+				width:40%;
+				background-color: $SoftRed;
+				position: absolute;
+				bottom:0;
+				left:0;
+				right:0;
+				margin:0 auto;
+				opacity: 0;
+				transition: all 0.5s ease-in;
+				@media screen and (min-width:800px){
+					width:100%;
+				}
+			}
+			li:nth-of-type(1) .onFocus{
+				opacity: 1;
+			}
+		}
+		.slide{
+			max-width:1440px;
+			position: relative;
+			margin:70px 0 0 0;
+			.slider{
+				position: absolute;
+				opacity: 0;
+				transition: opacity 0.8s ease-in-out;
+				@media screen and (min-width:880px){
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					justify-content: space-around;
+				}
+				img{
+					width:90%;
+					margin:0 0 80px 0;
+					max-width: 600px;
+					@media screen and (min-width:880px){
+						width:40%;
+						align-self: flex-start;
+					}
+				}
+				div{
+					@media screen and (min-width: 880px){
+						width:40%;
+						text-align: left;
+						align-self: flex-start;
+						margin:20px 0 0 0;
+					}
+				}
+				button{
+					display:none;
+					@media screen and (min-width:880px){
+						display: block;
+						background-color: $SoftBlue;
+						border:none;
+						color:white;
+						padding:17px;
+						border-radius: 4px;
+					}
+				}
+			}
+		}
+		.slider.currentSlider{
+			opacity: 1;
+		}
+	}
+	section:nth-of-type(2){
+		margin-top: 700px;
+		@media screen and (min-width:1000px){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			h2{
+				display:block;
+				margin:0 auto 20px auto;
+				width:100%;
+			}
+			div:nth-of-type(1){
+				margin-top: 30px;
+			}
+			div:nth-of-type(2){
+				margin-top: 90px;
+			}
+			div:nth-of-type(3){
+				margin-top: 150px;
+			}
+		}
+
+		p{
+			display:block;
+			width:100%;
+			min-width: 400px;
+			margin: 0 auto;
+		}
+		div{
+			width: 280px;
+			height: 363px;
+			margin: 20px auto 10px auto;
+			padding:45px 23px 25px 23px;
+			display: flex;
+			border-radius: 5px;
+			box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.1);
+			flex-direction: column;
+			background-image: url('images/bg-dots.svg');
+			background-repeat: no-repeat;
+			background-position: 50% 73%;
+			@media screen and (min-width: 1000px){
+				margin:0;
+				width:30%;
+			}
+			img{
+				align-self: center;
+				margin:0 0 15px 0;
+			}
+			button{
+				margin-top: auto;
+				padding:18px;
+				border-radius: 10px;
+				border:none;
+				background-color: $SoftBlue;
+				font-weight: 500;
+				font-size: 13px;
+
+				&:hover{
+					background-color: white;
+					border:2px solid $SoftBlue;
+					color:$SoftBlue;
+				}
+			}
+		}
+	}
+	section:nth-of-type(3){
+		padding:123px 0 0 0;
+		max-width: 548px;
+		margin: 0 auto;
+		div{
+			position: relative;
+			text-align: left;
+			border-bottom: 0.1px solid $GrayishBlue;
+			transition: all 1s;
+			span{
+				width:100%;
+				padding:19px 0;
+				display: block;
+				transition: all 1s;
+				&:hover{
+					color:$SoftRed;
+				}
+				img,svg{
+					float:right;
+				}
+				svg{
+					display:none;
+				}
+			}
+			span.active{
+				img{
+					display:none;
+				}
+				svg{
+					transform: scaleY(-1);
+					display: block;
+				}
+			}
+			p{
+				display: none;
+				font-weight: 400;
+			}
+			p.active{
+				display:block;
+			}
+		}
+		button{
+			margin:40px 0 0 0;
+			padding:20px;
+			background-color: $SoftBlue;
+			color:white;
+			border-radius: 5px;
+			font-weight: 500;
+			border:none;
+		}
+	}
+}

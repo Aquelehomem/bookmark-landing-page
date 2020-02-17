@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+@import 'abstracts/variables';
+
+// import vendor styles
+// @import '../vendor/file';
+
+@import 'base/reset';
+@import 'base/typography';
+
+// import layouts, pages and components
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+// @import 'components/mycomponent';
+@import 'components/hamburguer';
+@import 'components/blueObject';

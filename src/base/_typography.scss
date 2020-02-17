@@ -1,0 +1,180 @@
+/**
+ * Default font family, size and color
+ */
+ @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+ body {
+  font-family: 'Rubik',$font-primary;
+  font-size: 18px;
+  color: $color-text;
+  li{
+    list-style: none;
+  }
+}
+nav{
+  ul li a{
+    @media screen and (min-width:963px){
+      font-size: 12px;
+      font-family: 'Rubik';
+      color:black;
+      text-transform:uppercase;
+      
+      &:hover{
+        color:$SoftRed;
+      }
+    }
+  }
+  button{
+    @media screen and (min-width:963px){
+      color:white;
+      text-transform: uppercase;
+      background-color: $SoftRed;
+      font-weight: 700;
+      font-size: 12px;
+      border:unset;
+      &:hover{
+        color:$SoftRed;
+        align-self: center;
+        background-color: white;
+        border:2px solid $SoftRed;
+      }
+    }
+  }
+}
+nav.active{
+  font-size: 15px;
+  a{
+    @media screen and (max-width: 963px){
+      color:white;
+      text-transform: uppercase;
+      font-weight: 400;}
+
+
+    }
+    button{
+      @media screen and (max-width: 963px){
+        color:white;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 15px;}
+      }
+    }
+    
+
+    header{
+
+      .container{
+        text-align: center;
+        h1{
+          font-size: 30px;
+          font-weight: 500;
+          @media screen and (min-width:1000px){
+            font-size: 40px;
+          }
+        }
+        p{
+          color:$GrayishBlue;
+          font-size: 15px;
+          line-height: 1.9;
+        }
+      }
+      .buttonContainer{
+        button{
+          background-color: $SoftBlue;
+          color:white;
+          font-weight: 500;
+          font-size: 13px;
+          font-family: 'Rubik';
+          &:hover{
+            color:$SoftBlue;
+            background-color: white;
+            border:2px solid $SoftBlue;
+          }
+        }
+        button:nth-of-type(2){
+          color:$VeryDarkBlue;
+          background-color: #F7F7F7;
+          box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.1);
+          &:hover{
+            background-color: white;
+            border:2px solid $VeryDarkBlue;
+          }
+        }
+      }
+    }
+
+    main{
+      h2{
+        font-weight: 500;
+        font-size:25px;
+      }
+      p{
+        color:$GrayishBlue;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      section:nth-of-type(1){
+        ul li a{
+          color:$GrayishBlue;
+          font-weight: 400;
+          transition: all 0.5s;
+          &:hover{
+            color:$SoftRed;
+          }
+          @media screen and (min-width:800px){
+            font-size: 16px;
+          }
+        }
+        ul li a.active{
+          color:$VeryDarkBlue;
+
+          .slide{
+            h2{
+              font-size: 25px;
+            }
+            p{
+              color:red;
+            }
+          }
+        }
+      }
+      section:nth-of-type(2){
+        h3{
+          font-weight: 500;
+          font-size: 18px;
+        }
+        span{
+          color:$GrayishBlue;
+          font-size: 14px;
+        }
+        button{
+          color:white;
+          font-weight: 500;
+        }
+      }
+      section:nth-of-type(3){
+        div{
+          text-align: left;
+          a span{
+            text-decoration: none;
+            color:$VeryDarkBlue;
+            font-size: 15px;
+          } 
+        }
+      }
+    }
+
+    footer{
+      section:nth-of-type(1){
+        text-align: center;
+        color:white;
+        span:nth-of-type(1){
+          text-transform: uppercase;
+          font-size: 10px;
+          letter-spacing: 4px;
+        }
+        span:nth-of-type(2){
+          font-size: 23px;
+          font-weight: 500;
+        }
+      }
+    }
